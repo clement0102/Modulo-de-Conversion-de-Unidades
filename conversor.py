@@ -1,15 +1,21 @@
+try:
 # conversor.py
 
-def celsius_a_fahrenheit(c):
+  def celsius_a_fahrenheit(c):
     """Convierte grados Celsius a Fahrenheit."""
     return c * 1.8 + 32
 
-
-def fahrenheit_a_celsius(f):
+  def fahrenheit_a_celsius(f):
     """Convierte grados Fahrenheit a Celsius."""
     return (f - 32) / 1.8
 
-
-def kilometros_a_millas(km):
+  def kilometros_a_millas(km):
     """Convierte kilómetros a millas."""
     return km * 0.621371
+
+except: 
+    print("Ocurrió un error en la conversión. Por favor, verifica los valores ingresados.")
+    
+finally:
+    print("Conversor de unidades finalizado.")
+    print("Gracias por usar el conversor de unidades.")
