@@ -13,10 +13,26 @@ def crear_matriz_identidad(n: int) -> list[list[int]]:
         for i in range(n)
     ]
 
+if __name__ == "__main__":
 
-if __name__ == '__main__':
-    # Prueba unitaria básica
-    matriz = crear_matriz_identidad(3)
+    try:
+        # Prueba unitaria básica
+        n = int(input("Ingrese la dimensión de la matriz: "))
 
-    for fila in matriz:
-        print(fila)
+        if n <= 0:
+            raise ValueError("La dimensión debe ser un número entero positivo.")
+
+        matriz = crear_matriz_identidad(n)
+
+        print("\nMatriz identidad:")
+        for fila in matriz:
+            print(fila)
+
+    except ValueError as e:
+        print(f"Error: {e}")
+
+    except Exception as e:
+        print(f"Ocurrió un error inesperado: {e}")
+
+    finally:
+        print("\nProceso de creación de la matriz finalizado.")
